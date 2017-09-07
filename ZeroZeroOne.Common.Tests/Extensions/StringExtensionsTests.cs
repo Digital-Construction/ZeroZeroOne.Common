@@ -4,10 +4,10 @@ using ZeroZeroOne.Common.Extensions;
 
 namespace ZeroZeroOne.Common.Tests.Extensions
 {
-    [TestFixture()]
+    [TestFixture]
     public class StringExtensionsTests
     {
-        [Test()]
+        [Test]
         public void HasValue_Returns_True_If_String_Is_Not_Empty()
         {
             var theValue = "This is a string";
@@ -17,7 +17,7 @@ namespace ZeroZeroOne.Common.Tests.Extensions
             Assert.IsTrue(hasValue);
         }
 
-		[Test()]
+        [Test]
 		public void HasValue_Returns_False_If_String_Is_Empty()
 		{
 			var theValue = "";
@@ -27,12 +27,10 @@ namespace ZeroZeroOne.Common.Tests.Extensions
 			Assert.IsFalse(hasValue);
 		}
 
-		[Test()]
+        [Test]
 		public void HasValue_Returns_False_If_String_Is_Null()
 		{
-			String theValue = null;
-
-			var hasValue = theValue.HasValue();
+			var hasValue = ((String) null).HasValue();
 
 			Assert.IsFalse(hasValue);
 		}

@@ -18,7 +18,14 @@ namespace ZeroZeroOne.Common.Extensions
 {
     public static class StringExtensions
     {
-		public static Boolean HasValue(this String value)
+        /// <summary>
+        /// Determines whether this string has any characters.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified value has value; otherwise, <c>false</c>.
+        /// </returns>
+        public static Boolean HasValue(this String value)
 		{
 			return !String.IsNullOrEmpty(value);
 		}
